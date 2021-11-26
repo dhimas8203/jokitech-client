@@ -72,7 +72,7 @@ const Account = () => {
                 {Authorization: "Bearer " + cookies.get("token")},
             },
             ).then(() => {
-                history.push('/account')
+                window.location.reload();
             })
         }
     }, [update])
