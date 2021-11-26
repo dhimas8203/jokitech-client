@@ -16,7 +16,7 @@ const AdminJasa = () => {
     const cookies = new Cookies()
 
     useEffect(() => {
-        axios.get("http://localhost:4000/api/v1/jasas/getAll")
+        axios.get("https://jokitech.herokuapp.com/api/v1/jasas/getAll")
             .then((res) => {
                 console.log(res)
                 setData(res.data)

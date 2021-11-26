@@ -15,7 +15,7 @@ const Posting = () => {
     const cookies = new Cookies()
 
     useEffect(() => {
-        axios.get("http://localhost:4000/api/v1/jasas/view/penjasaid/" + cookies.get("dataId"))
+        axios.get("https://jokitech.herokuapp.com/api/v1/jasas/view/penjasaid/" + cookies.get("dataId"))
             .then((res) => {
                 setData(res.data)
                 setLoad(false)

@@ -19,7 +19,7 @@ const CreateProject = () => {
         e.preventDefault()
         const data = {penjasaId, namaPencariJasa, namaJasa, kategoriJasa, biaya, statusProject}
 
-        axios.post("http://localhost:4000/api/v1/history_projects/createHistoryProject",
+        axios.post("https://jokitech.herokuapp.com/api/v1/history_projects/createHistoryProject",
             data,
             {headers:
                 {Authorization: "Bearer " + cookies.get("token")},

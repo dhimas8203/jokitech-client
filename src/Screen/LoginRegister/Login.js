@@ -19,7 +19,7 @@ const Login = () => {
         const data = {email, password}
         e.preventDefault()
 
-        axios.post("http://localhost:4000/api/v1/penjasas/login", data)
+        axios.post("https://jokitech.herokuapp.com/api/v1/penjasas/login", data)
             .then(res=>{
                 setIsPassTrue(false)
                 const decode = jwt_decode(res.data.token)

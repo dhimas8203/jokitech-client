@@ -10,7 +10,7 @@ const JasaGraph = () => {
     const [search, setSearch] = useState("")
 
     useEffect(() =>{
-        axios.get("http://localhost:4000/api/v1/jasas/getCat1")
+        axios.get("https://jokitech.herokuapp.com/api/v1/jasas/getCat1")
             .then(res => {
                 setData(res.data)
                 setLoad(false)

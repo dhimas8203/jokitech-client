@@ -11,7 +11,7 @@ const ListJasaAdmin = (props) => {
     const cookies = new Cookies()
 
     const deletePost = (id) => {
-        axios.delete("http://localhost:4000/api/v1/jasas/deleteJasa/" + id, 
+        axios.delete("https://jokitech.herokuapp.com/api/v1/jasas/deleteJasa/" + id, 
         {headers: 
                 {Authorization: "Bearer " + cookies.get("token")},
         }).then(() => {

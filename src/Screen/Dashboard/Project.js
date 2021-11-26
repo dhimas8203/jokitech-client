@@ -25,7 +25,7 @@ const Project = () => {
     const [search, setSearch] = useState("")
 
     useEffect(() => {
-        axios.get("http://localhost:4000/api/v1/history_projects/getAllHistoryProject/" + cookies.get("dataId"),
+        axios.get("https://jokitech.herokuapp.com/api/v1/history_projects/getAllHistoryProject/" + cookies.get("dataId"),
             {headers:
                 {Authorization: "Bearer " + cookies.get("token")},
             },
@@ -35,7 +35,7 @@ const Project = () => {
             }
         })
 
-        axios.get("http://localhost:4000/api/v1/history_projects/getHistoryProjectSum/" + cookies.get("dataId"),
+        axios.get("https://jokitech.herokuapp.com/api/v1/history_projects/getHistoryProjectSum/" + cookies.get("dataId"),
             {headers:
                 {Authorization: "Bearer " + cookies.get("token")},
             },
@@ -45,7 +45,7 @@ const Project = () => {
             }
         })
 
-        axios.get("http://localhost:4000/api/v1/history_projects/getHistoryProjectTotal/" + cookies.get("dataId"),
+        axios.get("https://jokitech.herokuapp.com/api/v1/history_projects/getHistoryProjectTotal/" + cookies.get("dataId"),
             {headers:
                 {Authorization: "Bearer " + cookies.get("token")},
             },
@@ -55,7 +55,7 @@ const Project = () => {
             }
         })
         
-        axios.get("http://localhost:4000/api/v1/history_projects/getHistoryProjectFinished/" + cookies.get("dataId"),
+        axios.get("https://jokitech.herokuapp.com/api/v1/history_projects/getHistoryProjectFinished/" + cookies.get("dataId"),
             {headers:
                 {Authorization: "Bearer " + cookies.get("token")},
             },
@@ -86,7 +86,7 @@ const Project = () => {
 
     const handleUpdate = () => {
         if (checked1==true && namaPencariJasa){
-            axios.put("http://localhost:4000/api/v1/history_projects/updateHistoryProject/" + id,
+            axios.put("https://jokitech.herokuapp.com/api/v1/history_projects/updateHistoryProject/" + id,
                 {
                     namaPencariJasa: namaPencariJasa,
                     namaJasa: namaJasa,
@@ -101,7 +101,7 @@ const Project = () => {
                 window.location.reload();
             })
         } else {
-            axios.put("http://localhost:4000/api/v1/history_projects/updateHistoryProject/" + id,
+            axios.put("https://jokitech.herokuapp.com/api/v1/history_projects/updateHistoryProject/" + id,
                 {
                     namaPencariJasa: namaPencariJasa,
                     namaJasa: namaJasa,

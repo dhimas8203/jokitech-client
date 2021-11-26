@@ -91,7 +91,7 @@ const CreateJasa = () => {
     }
 
     useEffect(() => {
-        axios.get("http://localhost:4000/api/v1/penjasas/view/" + cookies.get("dataId"))
+        axios.get("https://jokitech.herokuapp.com/api/v1/penjasas/view/" + cookies.get("dataId"))
         .then(res => {
             setNamaPenjasa(res.data.namaPenjasa)
             setNomorHpPenjasa(res.data.nomorHpPenjasa)
@@ -111,7 +111,7 @@ const CreateJasa = () => {
             fd.append('catJasa', catJasa)
             fd.append('image', imageFix)
 
-            axios.post("http://localhost:4000/api/v1/jasas/createJasa",
+            axios.post("https://jokitech.herokuapp.com/api/v1/jasas/createJasa",
                 fd,
                 {headers:
                     {Authorization: "Bearer " + cookies.get("token")},

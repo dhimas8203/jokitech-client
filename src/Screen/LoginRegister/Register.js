@@ -19,7 +19,7 @@ const Register = () => {
         const data = {email, password, namaPenjasa, nomorHpPenjasa}
         e.preventDefault()
         
-        axios.post("http://localhost:4000/api/v1/penjasas/register", data)
+        axios.post("https://jokitech.herokuapp.com/api/v1/penjasas/register", data)
         .then(res=>{
             console.log(res)
             history.push("/login")

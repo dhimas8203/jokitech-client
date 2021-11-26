@@ -14,13 +14,13 @@ const DetailJasa = () => {
     const cookies = new Cookies()
 
     useEffect(() => {
-        axios.get("http://localhost:4000/api/v1/jasas/view/jasaid/" + id
+        axios.get("https://jokitech.herokuapp.com/api/v1/jasas/view/jasaid/" + id
         ).then(res => {
             setDataJasa(res.data)
             setLoad(false)
             return res.data
         }).then(res => {
-            axios.get("http://localhost:4000/api/v1/penjasas/view/" + res.penjasaId)
+            axios.get("https://jokitech.herokuapp.com/api/v1/penjasas/view/" + res.penjasaId)
                 .then(res => {
                     setDataPenjasa(res.data)
                 })

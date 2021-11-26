@@ -13,12 +13,12 @@ const DetailPenjasa = () => {
     const [search, setSearch] = useState("")
 
     useEffect(() => {
-        axios.get("http://localhost:4000/api/v1/penjasas/view/" + id)
+        axios.get("https://jokitech.herokuapp.com/api/v1/penjasas/view/" + id)
             .then(res => {
                 setData(res.data)
             })
 
-        axios.get("http://localhost:4000/api/v1/jasas/view/penjasaid/" + id)
+        axios.get("https://jokitech.herokuapp.com/api/v1/jasas/view/penjasaid/" + id)
             .then(res => {
                 setListJasa(res.data)
             })

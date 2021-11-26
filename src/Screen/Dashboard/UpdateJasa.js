@@ -41,7 +41,7 @@ const UpdateJasa = () => {
     const imagePreviewCanvasRef = useRef()
     
     useEffect(() => {
-        axios.get("http://localhost:4000/api/v1/jasas/view/jasaid/" + id)
+        axios.get("https://jokitech.herokuapp.com/api/v1/jasas/view/jasaid/" + id)
             .then((res) => {
                 setData(res.data)
                 return res.data
@@ -53,7 +53,7 @@ const UpdateJasa = () => {
                 setImagePreview(res.image)
             })
         
-        axios.get("http://localhost:4000/api/v1/penjasas/view/" + cookies.get("dataId"))
+        axios.get("https://jokitech.herokuapp.com/api/v1/penjasas/view/" + cookies.get("dataId"))
             .then((res) => {
                 setDataPenjasa(res.data)
                 setNamaPenjasa(res.data.namaPenjasa)
@@ -74,7 +74,7 @@ const UpdateJasa = () => {
             fd.append('catJasa', catJasa)
             fd.append('image', imageFix)
 
-            axios.put("http://localhost:4000/api/v1/jasas/updateJasa/" + id,
+            axios.put("https://jokitech.herokuapp.com/api/v1/jasas/updateJasa/" + id,
                 fd,
                 {headers: 
                     {Authorization: "Bearer " + cookies.get("token")},

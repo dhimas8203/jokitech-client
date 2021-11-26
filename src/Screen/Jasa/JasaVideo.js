@@ -10,7 +10,7 @@ const JasaVideo = () => {
     const [search, setSearch] = useState("")
 
     useEffect(() =>{
-        axios.get("http://localhost:4000/api/v1/jasas/getCat3")
+        axios.get("https://jokitech.herokuapp.com/api/v1/jasas/getCat3")
             .then(res => {
                 setData(res.data)
                 setLoad(false)

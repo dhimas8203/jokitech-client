@@ -25,7 +25,7 @@ const ListUser = (props) => {
 
     useEffect(() => {
         if(idPenjasa){
-            axios.get("http://localhost:4000/api/v1/history_projects/getAllHistoryProject/" + idPenjasa,
+            axios.get("https://jokitech.herokuapp.com/api/v1/history_projects/getAllHistoryProject/" + idPenjasa,
                 {headers:
                     {Authorization: "Bearer " + cookies.get("token")},
                 },
@@ -33,7 +33,7 @@ const ListUser = (props) => {
                 setDataHistory(res.data)
             })
 
-            axios.get("http://localhost:4000/api/v1/jasas/view/penjasaid/" + idPenjasa,
+            axios.get("https://jokitech.herokuapp.com/api/v1/jasas/view/penjasaid/" + idPenjasa,
             ).then((res) => {
                 setDataJasa(res.data)
             })
@@ -43,7 +43,7 @@ const ListUser = (props) => {
     useEffect(() => {
         if(dataHistory){
             dataHistory.map((isi) => {
-                axios.delete("http://localhost:4000/api/v1/history_projects/deleteHistoryProject/" + isi.id,
+                axios.delete("https://jokitech.herokuapp.com/api/v1/history_projects/deleteHistoryProject/" + isi.id,
                     {headers:
                         {Authorization: "Bearer " + cookies.get("token")},
                     },
@@ -55,7 +55,7 @@ const ListUser = (props) => {
     useEffect(() => {
         if(dataJasa){
             dataJasa.map((isi) => {
-                axios.delete("http://localhost:4000/api/v1/jasas/deleteJasa/" + isi.id,
+                axios.delete("https://jokitech.herokuapp.com/api/v1/jasas/deleteJasa/" + isi.id,
                     {headers:
                         {Authorization: "Bearer " + cookies.get("token")},
                     },
@@ -67,7 +67,7 @@ const ListUser = (props) => {
 
     useEffect(() => {
         if(done){
-            axios.delete("http://localhost:4000/api/v1/penjasas/deletePenjasa/" + idPenjasa,
+            axios.delete("https://jokitech.herokuapp.com/api/v1/penjasas/deletePenjasa/" + idPenjasa,
                 {headers:
                     {Authorization: "Bearer " + cookies.get("token")},
                 },

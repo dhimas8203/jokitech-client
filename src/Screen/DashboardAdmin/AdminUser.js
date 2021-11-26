@@ -16,7 +16,7 @@ const AdminUser = () => {
     const cookies = new Cookies()
 
     useEffect(() => {
-        axios.get("http://localhost:4000/api/v1/penjasas/",
+        axios.get("https://jokitech.herokuapp.com/api/v1/penjasas/",
             {headers: 
                 {Authorization: "Bearer " + cookies.get("token")},
             },

@@ -32,7 +32,7 @@ const Account = () => {
     
     
     useEffect(() =>{
-        axios.get("http://localhost:4000/api/v1/penjasas/view/" + cookies.get("dataId"))
+        axios.get("https://jokitech.herokuapp.com/api/v1/penjasas/view/" + cookies.get("dataId"))
         .then(res => {
             console.log(res)
             setData(res.data)
@@ -64,7 +64,7 @@ const Account = () => {
             fd.append('aboutMe', aboutMe)
             fd.append('profilePicture', profilePicture)
             
-            axios.put("http://localhost:4000/api/v1/penjasas/updateBio/" + cookies.get("dataId"),    
+            axios.put("https://jokitech.herokuapp.com/api/v1/penjasas/updateBio/" + cookies.get("dataId"),    
             fd,
             {headers: 
                 {Authorization: "Bearer " + cookies.get("token")},

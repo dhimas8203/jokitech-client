@@ -16,7 +16,7 @@ const Navbar = () => {
     const history = useHistory()
     
     useEffect(() =>{
-        axios.get("http://localhost:4000/api/v1/penjasas/view/" + cookies.get("dataId"))
+        axios.get("https://jokitech.herokuapp.com/api/v1/penjasas/view/" + cookies.get("dataId"))
             .then(res => {
                 setData(res)
             })
