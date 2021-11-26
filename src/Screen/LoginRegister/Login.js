@@ -29,7 +29,7 @@ const Login = () => {
                 cookies.set("dataId", decode.penjasaId, {expires: new Date(Date.now + 1)})
                 cookies.set("namaPenjasa", decode.namaPenjasa, {expires: new Date(Date.now + 1)})
                 if(penjasaId){
-                    if(penjasaId==="619dcec98731dd10b8003747"){
+                    if(penjasaId==="61a0d0a1134b58b487c04dc6"){
                         history.push("/adminuser")
                     } else {
                         history.push("/project")

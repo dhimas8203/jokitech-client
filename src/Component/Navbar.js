@@ -67,7 +67,7 @@ const Navbar = () => {
                                 <div className="segitiga">
                                     <div className="arrow-up"></div>
                                 </div>
-                                {penjasaId==="619dcec98731dd10b8003747" && (
+                                {penjasaId==="61a0d0a1134b58b487c04dc6" && (
                                     <Link to="/adminuser">
                                         <div className="item">
                                             <MdOutlineDashboard color="white" />
@@ -75,7 +75,7 @@ const Navbar = () => {
                                         </div>
                                     </Link>
                                 )}
-                                {penjasaId!=="619dcec98731dd10b8003747" && (
+                                {penjasaId!=="61a0d0a1134b58b487c04dc6" && (
                                     <Link to="/project">
                                         <div className="item">
                                             <MdOutlineDashboard color="white" />

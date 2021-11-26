@@ -92,7 +92,7 @@ const ListUser = (props) => {
                         </TableRow>
                     </TableHead>
                     {data.filter(val => {
-                        if(val.id!=="619dcec98731dd10b8003747"){
+                        if(val.id!=="61a0d0a1134b58b487c04dc6"){
                             if(val==""){
                                 return val
                             }else if(val.namaPenjasa.toLowerCase().includes(search.toLowerCase())){

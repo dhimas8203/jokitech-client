@@ -72,10 +72,10 @@ const Account = () => {
                 {Authorization: "Bearer " + cookies.get("token")},
             },
             ).then(() => {
-                window.location.reload()
+                history.push('/account')
             })
         }
-    })
+    }, [update])
 
     const onCropComplete = (croppedAreaPercentage, croppedAreaPixels) => {
         const canvasRef = imagePreviewCanvasRef.current
