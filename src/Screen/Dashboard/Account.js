@@ -7,6 +7,7 @@ import Button from "@material-ui/core/Button";
 import '../../asset/CSS/Account.css'
 import { BsPencilSquare } from "react-icons/bs";
 import { IoCloseCircleSharp } from "react-icons/io5"
+import { useHistory } from "react-router";
 import { image64toCanvasRef, extractImageFileExtensionFromBase64, base64StringtoFile } from "../../utils/reusable"
 import { TextField } from '@material-ui/core';
 
@@ -16,6 +17,7 @@ const Account = () => {
     const [email, setEmail] = useState("")
     const [namaPenjasa, setNamaPenjasa] = useState("")
     const [nomorHpPenjasa, setNomorHpPenjasa] = useState("")
+    const history = useHistory()
     const [aboutMe, setAboutMe] = useState("")
     const [profilePicture, setProfilePicture] = useState(null)
     const [update, setUpdate] = useState(false)
