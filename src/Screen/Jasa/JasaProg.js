@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import PreviewJasa from "../../Component/PreviewJasa";
 import { BiSearchAlt } from "react-icons/bi";
-import { useEffect, useState } from "react/cjs/react.development";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import '../../asset/CSS/JasaProg.css'
 
@@ -15,7 +15,6 @@ const JasaProg = () => {
             .then((res) => {
                 setData(res.data)
                 setLoad(false)
-                console.log(res.data)
             })
     }, [])
 
