@@ -72,7 +72,7 @@ const Account = () => {
                 {Authorization: "Bearer " + cookies.get("token")},
             },
             ).then(() => {
-                window.location.reload();
+                console.log("test")
             })
         }
     }, [update])
